@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Image Decoder
+Test whether an encoded image gets decoded correctly
+
+by Saumil Shah @therealsaumil
+Design and Refactor by Andy Couto
+-->
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+  <script src="md5.js"></script>
+  <script src="fixing_imagedecode.js"></script>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="base.css" rel="stylesheet">   
+
+</head>
+<body>
+   <h1 class="display-4 text-center" style="padding: 50px;">Decode Embedded Messages in Images</h1>
+
+   <div class="container">     
+
+    <form class="well" name="formInput">
+        <input style="vertical-align: middle; padding: 10px;" class="col-md-3" type="text" id="imageFile" placeholder="Source Filename"  required> <!-- Make sure in same directory -->
+        <input style="vertical-align: middle; padding: 10px;" min="0" max="7" class="col-md-2" type="number" id="bitlayer" placeholder="Bitlayer"  required>
+
+        <input style="vertical-align: middle; padding: 10px;" min="0" max="3" class="col-md-2" type="number" id="encodingChannel" placeholder="Channel"  required>
+
+        <input style="vertical-align: middle; padding: 10px;" min="0" max="10" class="col-md-2" type="number" id="grid" placeholder="Grid"  required>                        
+        <input style="vertical-align: middle; padding-top: 10px; padding-bottom: 10px;" name="submit" type="button" class="btn btn-danger" value="Submit" onclick="getInfo()"/>
+    </form>
+
+
+    <div class="row" style="margin: 20px;">
+      <div class="col-md-12 text-center"> 
+        <img id="imgsrc">
+      </div> 
+    </div>   
+
+
+      <div class="row" style="padding-bottom: 30px;">
+            <div class="col-md-12 text-center">  
+              <input class="btn-lg btn-success" type=button id="decodebutton" value="decode" onclick="decodeImageData()">
+            </div>
+      </div>
+
+      <div class="row" style="padding-bottom: 30px;">
+        <label class="col-4" for="output">Decoded Message</label>        
+        <textarea class="col-12" id="output" rows=10 cols=80 readonly=true></textarea>
+      </div> 
+
+      <div class="row">
+           <label class="col-2" for="md5sum">MD5</label>
+           <input class="col-10" type="text" id="md5sum" size=80 readonly=true>
+      </div>  
+
+    </div>
+
+   <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="d-block mb-2" src="stegosploit_logo_small.jpg"></img>
+          <small class="d-block mb-3 text-muted">&copy; 2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Full Stegasploit Toolkit</h5>
+          <p>Found in <a href="https://www.alchemistowl.org/pocorgtfo/pocorgtfo08.pdf">Issue 0x08 of Poc||GTFO</a>  For more information check out <a href="http://stegosploit.info/">http://stegosploit.info/</a> </p>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <p>For a Cryptology class I wanted to explore steganography and help contribute by making this tool more
+          accessible and usable.</p> 
+        </div>
+      </div>
+   </footer>    
+
+</body>
+</html>
+

@@ -1,0 +1,82 @@
+#image_disclaimer {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#original {
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+	max-width: 100%;	
+}
+
+#settings {
+	margin-top: 20px; 
+	margin-bottom: 20px;	
+}
+
+#rgb {
+	text-align:center; 
+	padding: 20px;	
+}
+
+#channels_label {
+	padding-left: 10px;	
+}
+
+#exploits {
+	margin-left: 50px;
+}
+
+#process_btn {
+	padding-bottom: 20px;
+}
+
+#histogram {
+	padding-bottom: 50px;
+}
+
+#iterate_info {
+	padding-bottom: 20px;	
+}
+
+#iterate {
+	margin-right: 10px;	
+}
+
+#iteration {
+	margin-right: 10px; 
+	margin-left: 10px;	
+}
+
+#difference {
+	margin-left: 10px;	
+}
+
+#stop {
+	margin-right: 10px;
+}
+
+#slow_label {
+	vertical-align: middle;	
+}
+
+#bottom_alittle {
+	padding-bottom: 10px;	
+}
+
+#bottom_alot  {
+	padding-bottom: 50px;
+}
+
+#heading {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+
+
+
+
