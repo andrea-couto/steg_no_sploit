@@ -1,35 +1,55 @@
 # Steg-no-sploit
 
-Stegnosploit is an a refactor of Saumil Shah's Stegosploit encoding and decoding tools. For the full toolkit and more in depth information please visit his site: http://stegosploit.info/ <br>
+A simplified, refactored, and responsive version of <a href="http://stegosploit.info/">Stegosploit</a>.
 
-
-## Motivation
-
-As part of a Cryptology course I wanted to explore and contribute to this project.
 
 
 ## Running
 
 Download this repo and extract the files
 
-Put the image (JPG/PNG) you want to encode in the same directory as the html files (inside the stego folder).
+Make sure that the image (JPG/PNG) you want to encode is in the same directory as this file(inside the stego folder). 
 
 Spin up a webserver (i.e. python -m http.server)
 
-Open the encoding or decoding html file with an internet browser.  
+open up 'fixing_iterative_encoding.html' for encoding
+
+Type in the name of the image including the image extension into the text field and click "Load"
+
+Pay attention to the bitlayer, number of channels, and grid. 
 
 Select bit layers 1-3 as a rule as <a href="http://stegosploit.info/#22-steganographically-encoding-the-exploit-code">large numbers disturb the image more</a>. 
 
-The grid is how the message is distributed in your image.
+Write your message and click "process".
 
-For smaller images make this number small (1-2). 
+You should have an image called "encoded_image.JPG" in your downloads folder 
+
+
+## How to run the decoder
+
+Place the encoded image in the same directory as the decoder file. 
+
+Spin up a webserver (i.e. python -m http.server).
+
+Open the decoder html file.
+
+Type the name of the encoded image in the text field.
+
+Fill out the bitlayer, channel, and grid fields and click "Decode"
+
+The message should appear in the text area below! 
 
 
 ## TODO
 
 There is still a lot more that can be done with this project, and I think the design could still be vastly improved upon. 
 
-- [ ] Add a CSS file and refactor the styling
 - [ ] Add a checkbox to show log only when needed/wanted
 - [ ] Add image validation on decoder page
+
+
+
+
+
+
 
